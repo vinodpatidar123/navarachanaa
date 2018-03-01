@@ -55,9 +55,22 @@ p {
 footer.page-footer {
   margin: 0;
 }
+body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
 #prizeSpan{
   font-size: 1.5em;
 }
 #mail{
   color:inherit;
+}
+.sponsor{
+    vertical-align: inherit;
+    vertical-align:
+    border: 0;
 }
