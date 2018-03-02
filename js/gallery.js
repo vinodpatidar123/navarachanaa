@@ -1,6 +1,6 @@
 (function($){
   $(function(){
-    $(.images).fancybox({
+    $().fancybox({
       selector : '[data-fancybox="group"]',
       loop     : true
     });

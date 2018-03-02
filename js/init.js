@@ -1,6 +1,5 @@
 (function($){
   $(function(){
-
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
     $('.scrollspy').scrollSpy();
@@ -10,6 +9,7 @@
     {selector: '.other-class', offset: 200, callback: 'globalFunction()' },
   ];
   Materialize.scrollFire(options);
+
 
   $('.modal').modal({
     dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -25,7 +25,13 @@
   }
 );
 
-
+$('a[href^="#"]').click(function() {
+     var target = $(this.hash);
+     if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
+     if (target.length == 0) target = $('html');
+     $('html, body').animate({ scrollTop: target.offset().top }, 1000);
+     return false;
+ });
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
